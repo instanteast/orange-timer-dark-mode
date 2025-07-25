@@ -1,18 +1,27 @@
 body {
   margin: 0;
   font-family: 'Nanum Gothic', sans-serif;
-  background: #003300;
-  color: #FFFF66;
   text-align: center;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.light-mode {
+  background: #fffbe6;
+  color: #333;
+}
+
+body.dark-mode {
+  background: #000000;
+  color: #ffffff;
 }
 
 h1 {
-  font-size: 3.5rem;
+  font-size: 4rem;
   margin: 2rem 0 1rem;
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin: 1rem 0;
 }
 
@@ -35,12 +44,12 @@ h2 {
 }
 
 .orange-btn {
-  background-color: #FFA500;
+  background-color: orange;
   border: none;
   border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  font-size: 1.4rem;
+  width: 140px;
+  height: 140px;
+  font-size: 1.5rem;
   color: white;
   cursor: pointer;
   transition: transform 0.2s ease;
@@ -53,34 +62,32 @@ h2 {
 .notice-content {
   text-align: center;
   white-space: pre-wrap;
-  background: #004400;
+  background: inherit;
   padding: 2rem;
-  border: 2px solid #CCCC66;
+  border: 2px solid #888;
   border-radius: 12px;
-  font-size: 1.8rem;
+  font-size: 2rem;
   line-height: 1.8;
-  color: #FFFF66;
-  overflow-wrap: break-word;
-  word-break: keep-all;
+  height: 100%;
 }
 
 .timer-layout {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  height: auto;
+  height: 70vh;
   width: 100%;
   align-items: center;
   justify-content: center;
   gap: 2rem;
 }
 
-.timer-left, .timer-right {
+.timer-left,
+.timer-right {
   flex: 1;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
 
 .centered-text {
@@ -91,36 +98,28 @@ h2 {
   position: absolute;
   top: 1rem;
   left: 1rem;
-  font-size: 2rem;
+  font-size: 2.5rem;
   background: none;
   border: none;
-  color: #FFFF66;
   cursor: pointer;
+  color: inherit;
 }
 
 .timer {
-  font-size: 10rem;
+  font-size: 14rem;
   font-weight: bold;
   margin: 2rem 0;
-}
-
-.timer-huge {
-  font-size: 12rem;
-  font-weight: bold;
-  margin: 2rem 0;
-  color: #FFFF66;
 }
 
 .sub-info {
-  font-size: 1.8rem;
-  color: #CCCC66;
+  font-size: 2rem;
   font-weight: bold;
 }
 
 .timer-end {
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: bold;
-  color: #FF6666;
+  color: red;
   margin-top: 3rem;
 }
 
@@ -130,31 +129,46 @@ h2 {
 
 input[type="number"] {
   font-size: 2rem;
-  width: auto;
-  max-width: 120px;
+  width: 100px;
   padding: 0.3rem;
   text-align: center;
-  background: #002200;
-  color: #FFFF66;
-  border: 2px solid #CCCC66;
 }
 
 #reading-test input[type="number"] {
-  font-size: 2.5rem;
-  height: 60px;
-  margin: 0.5rem;
+  font-size: 3rem;
+  width: 150px;
+  height: 80px;
+  margin: 1rem;
 }
 
 #reading-test label,
 #reading-test button {
-  font-size: 2.2rem;
-  color: #FFFF66;
+  font-size: 2.5rem;
+}
+
+.timer-huge {
+  font-size: 25rem;
+  font-weight: bold;
+  margin: 3rem 0 2rem;
 }
 
 #timer-subtext {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
-  line-height: 1.6;
-  color: #FFFF66;
+  line-height: 1.8;
+}
+
+.mode-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  background: #444;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  z-index: 999;
 }
 
