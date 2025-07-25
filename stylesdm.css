@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  font-family: 'Nanum Gothic', sans-serif;
+  background: #000000;        /* 배경을 검정으로 */
+  color: #FFFF66;             /* 전체 글씨를 노랑으로 */
+  text-align: center;
+}
+
+.notice-content {
+  background: #111111;        /* 공지창 배경은 아주 짙은 회색 */
+  color: #FFFF66;
+  border: 2px solid #444;
+}
+
+.sub-info {
+  font-size: 2rem;
+  color: #DDDDDD;             /* 부가설명은 연한 회색 */
+  font-weight: bold;
+}
+
+.timer {
+  font-size: 14rem;
+  font-weight: bold;
+  margin: 2rem 0;
+  color: #FFFFFF;             /* 타이머 숫자는 흰색으로 선명하게 */
+  text-shadow: 2px 2px 4px #333;
+}
+
+.timer-huge {
+  font-size: 25rem;
+  font-weight: bold;
+  margin: 3rem 0 2rem;
+  color: #FFFFFF;             /* 커다란 타이머도 흰색 */
+  text-shadow: 2px 2px 4px #333;
+}
+
+#timer-subtext {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1.8;
+  color: #FFFF66;             /* 안내 문구도 노랑 */
+}
+
+.timer-end {
+  font-size: 5rem;
+  font-weight: bold;
+  color: #FF4444;             /* 종료 메시지는 눈에 띄는 빨강 유지 */
+  margin-top: 3rem;
+}
