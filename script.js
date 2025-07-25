@@ -1,4 +1,3 @@
-
 let timerInterval;
 
 const fullNotice = `앞쪽부터 빈칸 없이 자리 채워서 앉아주세요.
@@ -10,6 +9,7 @@ const fullNotice = `앞쪽부터 빈칸 없이 자리 채워서 앉아주세요.
 2. <b>OMR 수험번호는 010 빼고 학생 전화번호</b> 적어주세요.
 
 3. <b>신규 학생</b>은 단어 시험 OMR 윗부분에 <b>신규</b>라고 적고, <b>이름, 학교</b>만 기입 후 시험지에 <b>아는 단어만 체크</b>해 주세요. <b>신규는 재시험 없으니 편하게</b> 보세요.`;
+
 const breakMsg = '복도에서 각자 자기 주간오렌지 가져가세요';
 
 function showScreen(id) {
@@ -61,6 +61,20 @@ function runTimer(duration) {
       clearInterval(timerInterval);
       document.getElementById('timer-end').classList.remove('hidden');
     }
+    time--;
+  }, 1000);
+}
+
+// 다크/라이트 모드 토글
+document.getElementById('toggle-mode').addEventListener('click', () => {
+  const body = document.body;
+  body.classList.toggle('dark-mode');
+  body.classList.toggle('light-mode');
+
+  const isDark = body.classList.contains('dark-mode');
+  document.getElementById('toggle-mode').textContent = isDark ? '☀️ 라이트모드' : '🌙 다크모드';
+});
+
     time--;
   }, 1000);
 }
