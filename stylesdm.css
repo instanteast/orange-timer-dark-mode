@@ -1,18 +1,18 @@
 body {
   margin: 0;
   font-family: 'Nanum Gothic', sans-serif;
-  background: #003300; /* 진한 녹색 칠판 배경 */
-  color: #FFFF66;       /* 빔에서 잘 보이는 노란 글씨 */
+  background: #003300;
+  color: #FFFF66;
   text-align: center;
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3.5rem;
   margin: 2rem 0 1rem;
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin: 1rem 0;
 }
 
@@ -35,12 +35,12 @@ h2 {
 }
 
 .orange-btn {
-  background-color: #FFA500; /* 오렌지 */
+  background-color: #FFA500;
   border: none;
   border-radius: 50%;
-  width: 140px;
-  height: 140px;
-  font-size: 1.5rem;
+  width: 120px;
+  height: 120px;
+  font-size: 1.4rem;
   color: white;
   cursor: pointer;
   transition: transform 0.2s ease;
@@ -53,39 +53,34 @@ h2 {
 .notice-content {
   text-align: center;
   white-space: pre-wrap;
-  background: #004400;     /* 진한 초록 */
+  background: #004400;
   padding: 2rem;
-  border: 2px solid #CCCC66; /* 연한 노랑 테두리 */
+  border: 2px solid #CCCC66;
   border-radius: 12px;
-  font-size: 2rem;
+  font-size: 1.8rem;
   line-height: 1.8;
-  height: 100%;
   color: #FFFF66;
+  overflow-wrap: break-word;
+  word-break: keep-all;
 }
 
 .timer-layout {
   display: flex;
   flex-direction: row;
-  height: 70vh;
+  flex-wrap: wrap;
+  height: auto;
   width: 100%;
   align-items: center;
   justify-content: center;
   gap: 2rem;
 }
 
-.timer-left {
+.timer-left, .timer-right {
   flex: 1;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.timer-right {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .centered-text {
@@ -96,7 +91,7 @@ h2 {
   position: absolute;
   top: 1rem;
   left: 1rem;
-  font-size: 2.5rem;
+  font-size: 2rem;
   background: none;
   border: none;
   color: #FFFF66;
@@ -104,21 +99,28 @@ h2 {
 }
 
 .timer {
-  font-size: 14rem;
+  font-size: 10rem;
   font-weight: bold;
   margin: 2rem 0;
 }
 
+.timer-huge {
+  font-size: 12rem;
+  font-weight: bold;
+  margin: 2rem 0;
+  color: #FFFF66;
+}
+
 .sub-info {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #CCCC66;
   font-weight: bold;
 }
 
 .timer-end {
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: bold;
-  color: #FF6666; /* 붉은색으로 유지 */
+  color: #FF6666;
   margin-top: 3rem;
 }
 
@@ -128,7 +130,8 @@ h2 {
 
 input[type="number"] {
   font-size: 2rem;
-  width: 100px;
+  width: auto;
+  max-width: 120px;
   padding: 0.3rem;
   text-align: center;
   background: #002200;
@@ -136,29 +139,22 @@ input[type="number"] {
   border: 2px solid #CCCC66;
 }
 
-.timer-huge {
-  font-size: 25rem;
-  font-weight: bold;
-  margin: 3rem 0 2rem;
-  color: #FFFF66;
-}
-
 #reading-test input[type="number"] {
-  font-size: 3rem;
-  width: 150px;
-  height: 80px;
-  margin: 1rem;
+  font-size: 2.5rem;
+  height: 60px;
+  margin: 0.5rem;
 }
 
 #reading-test label,
 #reading-test button {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   color: #FFFF66;
 }
 
 #timer-subtext {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
-  line-height: 1.8;
+  line-height: 1.6;
   color: #FFFF66;
 }
+
